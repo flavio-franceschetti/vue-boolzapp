@@ -48,7 +48,7 @@ img {
   justify-content: space-between;
   align-items: center;
   padding: 8px 20px;
-  background-color: hsl(0deg 0% 91.76%);
+  background-color: #eaeaea;
 }
 
 /* left header section */
@@ -67,8 +67,9 @@ img {
   border-radius: 50%;
 }
 
-.header-name {
-  display: inline-block;
+.last-access {
+  font-size: 12px;
+  color: #b1b1b1;
 }
 
 /* right header section */
@@ -81,7 +82,7 @@ img {
   cursor: pointer;
   border: none;
   font-size: 20px;
-  color: hsl(0deg 0% 69.41%);
+  color: #b1b1b1;
 }
 
 /* contact section */
@@ -89,6 +90,7 @@ img {
   background-color: lightcoral;
   width: 30%;
   min-width: 250px;
+  border-right: 1px solid lightgray;
 }
 
 /* chat section */
