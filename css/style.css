@@ -44,6 +44,7 @@ img {
 
 /* section header */
 .section-header {
+  height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -83,14 +84,38 @@ img {
   border: none;
   font-size: 20px;
   color: #b1b1b1;
+  background-color: #eaeaea;
 }
 
 /* contact section */
 .contact-section {
-  background-color: lightcoral;
   width: 30%;
   min-width: 250px;
   border-right: 1px solid lightgray;
+  /* debug */
+  background-color: lightcoral;
+}
+
+.toggle-notification {
+  padding: 10px 20px;
+  height: 70px;
+  background-color: #8edafc;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.notification-icon .fa-solid {
+  color: #8edafc;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 18px;
+}
+
+.toggle-desktop-notification a {
+  color: #9f9f9f;
+  font-size: 12px;
 }
 
 /* chat section */
