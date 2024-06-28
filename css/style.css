@@ -1,0 +1,19 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.bg-top {
+  height: 20vh;
+  background-color: hsl(174.36deg 98.68% 29.61%);
+}
+
+.bg-bottom {
+  height: 80vh;
+  background-color: hsl(68.57deg 8.86% 84.51%);
+}
+
+.container {
+  height: 100vh;
+}
