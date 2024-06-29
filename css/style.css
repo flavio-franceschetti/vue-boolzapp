@@ -118,6 +118,30 @@ img {
   font-size: 12px;
 }
 
+/* search contact section */
+.contact-search {
+  height: 40px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  background-color: #eaeaea;
+}
+
+.contact-search button {
+  width: 20%;
+  height: 100%;
+  cursor: pointer;
+  border: none;
+  background-color: #fff;
+}
+
+.contact-search input {
+  height: 100%;
+  width: 80%;
+  border: none;
+  background-color: #fff;
+}
+
 /* chat section */
 .chat-section {
   background-color: lightgreen;
