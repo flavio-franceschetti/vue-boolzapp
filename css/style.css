@@ -188,7 +188,42 @@ img {
 
 /* chat section */
 .chat-section {
-  background-color: lightgreen;
   width: 70%;
   min-width: 350px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* message section */
+.message-section {
+  height: 100%;
+  background-image: url(../image/U1SFl7.jpg);
+}
+
+/* write message section */
+.write-message-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 5px 15px;
+  min-height: 60px;
+  background-color: #eaeaea;
+}
+
+.write-message-section button {
+  color: #5e5e5e;
+  font-size: 20px;
+  border: none;
+  width: 10%;
+  background-color: #eaeaea;
+  cursor: pointer;
+}
+
+.write-message-section input {
+  height: 80%;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
 }
