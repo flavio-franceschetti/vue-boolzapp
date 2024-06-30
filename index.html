@@ -71,7 +71,11 @@
             <input type="text" placeholder="Cerca o inizia una nuova chat" />
           </div>
           <ul class="contact-list">
-            <li v-for="(contact, index) in contacts" class="contact-list-item">
+            <li
+              :class="contact.visible === true ? 'active-chat' : ''"
+              v-for="(contact, index) in contacts"
+              class="contact-list-item"
+            >
               <div class="contact-img">
                 <img :src="contact.avatar" alt="User Portrait" />
               </div>
@@ -112,17 +116,14 @@
           </div>
 
           <div class="message-section">
-            <div class="message inviato">
-              Ho inviato questo messaggio Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Earum, provident? Nostrum dolore aliquid
-              reprehenderit? Non tempora maxime debitis eveniet amet quod earum
-              magni vitae rerum? Nemo quibusdam quo quasi fugiat?
-            </div>
-            <div class="message ricevuto">
-              Ho ricevuto questo messaggio Lorem ipsum dolor sit amet,
-              consectetur adipisicing elit. Laudantium repellat quae quidem ad
-              veritatis deleniti assumenda illum iusto, ea quasi magnam, impedit
-              ex qui nihil at eveniet provident doloribus eum?
+            <div
+              :class="chat.status === 'sent' ? 'inviato' : 'ricevuto'"
+              class="message"
+              v-for="(chat, index) in contacts[0].messages"
+              :key="index"
+            >
+              {{chat.message}}
+              <div class="message-time">15:30</div>
             </div>
           </div>
 

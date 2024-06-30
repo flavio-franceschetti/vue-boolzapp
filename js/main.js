@@ -29,7 +29,7 @@ createApp({
         {
           name: "Fabio",
           avatar: "./image/2.jpg",
-          visible: true,
+          visible: false,
           messages: [
             {
               date: "20/03/2020 16:30:00",
@@ -51,7 +51,7 @@ createApp({
         {
           name: "Samuele",
           avatar: "./image/3.jpg",
-          visible: true,
+          visible: false,
           messages: [
             {
               date: "28/03/2020 10:10:40",
@@ -73,7 +73,7 @@ createApp({
         {
           name: "Alessandro B.",
           avatar: "./image/4.jpg",
-          visible: true,
+          visible: false,
           messages: [
             {
               date: "10/01/2020 15:30:55",
@@ -90,7 +90,7 @@ createApp({
         {
           name: "Alessandro L.",
           avatar: "./image/5.jpg",
-          visible: true,
+          visible: false,
           messages: [
             {
               date: "10/01/2020 15:30:55",
@@ -107,7 +107,7 @@ createApp({
         {
           name: "Claudia",
           avatar: "./image/6.jpg",
-          visible: true,
+          visible: false,
           messages: [
             {
               date: "10/01/2020 15:30:55",
@@ -129,7 +129,7 @@ createApp({
         {
           name: "Federico",
           avatar: "./image/7.jpg",
-          visible: true,
+          visible: false,
           messages: [
             {
               date: "10/01/2020 15:30:55",
@@ -146,7 +146,7 @@ createApp({
         {
           name: "Davide",
           avatar: "./image/8.jpg",
-          visible: true,
+          visible: false,
           messages: [
             {
               date: "10/01/2020 15:30:55",
@@ -168,9 +168,5 @@ createApp({
       ],
     };
   },
-  methods: {
-    prova() {
-      console.log(this.contacts[0].name);
-    },
-  },
+  methods: {},
 }).mount("#app");

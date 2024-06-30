@@ -27,7 +27,7 @@ img {
 
 /* reusable */
 .active-chat {
-  background-color: rgba(244, 244, 244, 0.632);
+  background-color: rgba(205, 205, 205, 0.445);
 }
 
 /* general container */
@@ -160,6 +160,7 @@ img {
   border-bottom: 1px solid rgba(211, 211, 211, 0.36);
   display: flex;
   gap: 5px;
+  cursor: pointer;
 }
 
 .contact-img {
@@ -211,6 +212,12 @@ img {
   margin-bottom: 10px;
 }
 
+.message-time {
+  text-align: right;
+  font-size: 10px;
+  color: #9f9f9f;
+}
+
 .inviato {
   background-color: #d5f9ba;
   display: inline-block;
@@ -219,6 +226,7 @@ img {
 }
 
 .ricevuto {
+  margin-right: auto;
   background-color: #fff;
   border-radius: 10px 10px 10px 0;
 }
