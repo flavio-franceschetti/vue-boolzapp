@@ -71,89 +71,12 @@
             <input type="text" placeholder="Cerca o inizia una nuova chat" />
           </div>
           <ul class="contact-list">
-            <li class="contact-list-item">
+            <li v-for="(contact, index) in contacts" class="contact-list-item">
               <div class="contact-img">
-                <img src="image/1.jpg" alt="User Portrait" />
+                <img :src="contact.avatar" alt="User Portrait" />
               </div>
               <div class="contact-info">
-                <div class="contact-name">Michele</div>
-                <div class="last-message">Ultimo messaggio inviato</div>
-              </div>
-              <div class="contact-time">12:00</div>
-            </li>
-
-            <li class="contact-list-item">
-              <div class="contact-img">
-                <img src="image/2.jpg" alt="User Portrait" />
-              </div>
-              <div class="contact-info">
-                <div class="contact-name">Fabio</div>
-                <div class="last-message">Ultimo messaggio inviato</div>
-              </div>
-              <div class="contact-time">12:00</div>
-            </li>
-
-            <li class="contact-list-item">
-              <div class="contact-img">
-                <img src="image/3.jpg" alt="User Portrait" />
-              </div>
-              <div class="contact-info">
-                <div class="contact-name">Samuele</div>
-                <div class="last-message">Ultimo messaggio inviato</div>
-              </div>
-              <div class="contact-time">12:00</div>
-            </li>
-
-            <li class="contact-list-item">
-              <div class="contact-img">
-                <img src="image/4.jpg" alt="User Portrait" />
-              </div>
-              <div class="contact-info">
-                <div class="contact-name">Alessandro B.</div>
-                <div class="last-message">Ultimo messaggio inviato</div>
-              </div>
-              <div class="contact-time">12:00</div>
-            </li>
-
-            <li class="contact-list-item">
-              <div class="contact-img">
-                <img src="image/5.jpg" alt="User Portrait" />
-              </div>
-              <div class="contact-info">
-                <div class="contact-name">Alessandro L.</div>
-                <div class="last-message">Ultimo messaggio inviato</div>
-              </div>
-              <div class="contact-time">12:00</div>
-            </li>
-
-            <li class="contact-list-item">
-              <div class="contact-img">
-                <img src="image/6.jpg" alt="User Portrait" />
-              </div>
-              <div class="contact-info">
-                <div class="contact-name">Claudia</div>
-                <div class="last-message">Ultimo messaggio inviato</div>
-              </div>
-              <div class="contact-time">12:00</div>
-            </li>
-
-            <li class="contact-list-item">
-              <div class="contact-img">
-                <img src="image/7.jpg" alt="User Portrait" />
-              </div>
-              <div class="contact-info">
-                <div class="contact-name">Federico</div>
-                <div class="last-message">Ultimo messaggio inviato</div>
-              </div>
-              <div class="contact-time">12:00</div>
-            </li>
-
-            <li class="contact-list-item">
-              <div class="contact-img">
-                <img src="image/8.jpg" alt="User Portrait" />
-              </div>
-              <div class="contact-info">
-                <div class="contact-name">Davide</div>
+                <div class="contact-name">{{contact.name}}</div>
                 <div class="last-message">Ultimo messaggio inviato</div>
               </div>
               <div class="contact-time">12:00</div>
@@ -208,7 +131,7 @@
             <button>
               <i class="fa-regular fa-face-smile"></i>
             </button>
-            <input type="text" placeholder="Scrivi il tuo messaggio" />
+            <input type="text" placeholder="Scrivi un messaggio" />
             <button>
               <i class="fa-solid fa-microphone"></i>
             </button>
