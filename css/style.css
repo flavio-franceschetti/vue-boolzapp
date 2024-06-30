@@ -198,6 +198,29 @@ img {
 .message-section {
   height: 100%;
   background-image: url(../image/U1SFl7.jpg);
+  padding: 50px;
+  padding-bottom: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  max-width: 60%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.inviato {
+  background-color: #d5f9ba;
+  display: inline-block;
+  border-radius: 10px 10px 0 10px;
+  margin-left: auto;
+}
+
+.ricevuto {
+  background-color: #fff;
+  border-radius: 10px 10px 10px 0;
 }
 
 /* write message section */
