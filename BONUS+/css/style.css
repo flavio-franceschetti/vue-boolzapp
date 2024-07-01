@@ -1,0 +1,260 @@
+/* GENERAL */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+/* bg colors */
+.bg-top {
+  height: 20vh;
+  background-color: hsl(174.36deg 98.68% 29.61%);
+}
+
+.bg-bottom {
+  height: 80vh;
+  background-color: hsl(68.57deg 8.86% 84.51%);
+}
+/* ************************** */
+
+/* reusable */
+.active-chat {
+  background-color: rgba(205, 205, 205, 0.445);
+}
+
+/* general container */
+.container {
+  height: 100vh;
+}
+
+/* main app container */
+.app-container {
+  width: 80%;
+  height: 90vh;
+  /* background-color: lightcoral; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+}
+
+/* section header */
+.section-header {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 20px;
+  background-color: #eaeaea;
+}
+
+/* left header section */
+.left-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.left-header .header-img {
+  width: 50px;
+  display: inline-block;
+}
+
+.header-img img {
+  border-radius: 50%;
+}
+
+.last-access {
+  font-size: 12px;
+  color: #b1b1b1;
+}
+
+/* right header section */
+.right-header {
+  display: flex;
+  gap: 15px;
+}
+
+.right-header button {
+  cursor: pointer;
+  border: none;
+  font-size: 20px;
+  color: #b1b1b1;
+  background-color: #eaeaea;
+}
+
+/* contact section */
+.contact-section {
+  width: 30%;
+  min-width: 250px;
+  border-right: 1px solid lightgray;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.toggle-notification {
+  padding: 10px 20px;
+  height: 70px;
+  background-color: #8edafc;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.notification-icon .fa-solid {
+  color: #8edafc;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 18px;
+}
+
+.toggle-desktop-notification a {
+  color: #9f9f9f;
+  font-size: 12px;
+}
+
+/* search contact section */
+.contact-search {
+  min-height: 40px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  background-color: #eaeaea;
+}
+
+.contact-search button {
+  width: 20%;
+  height: 100%;
+  cursor: pointer;
+  border: none;
+  background-color: #fff;
+}
+
+.contact-search input {
+  height: 100%;
+  width: 80%;
+  border: none;
+  background-color: #fff;
+  padding: 5px 10px;
+}
+
+/* contact list */
+.contact-list {
+  list-style: none;
+  overflow-y: auto;
+}
+
+.contact-list-item {
+  padding: 5px 15px;
+  border-bottom: 1px solid rgba(211, 211, 211, 0.36);
+  display: flex;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.contact-img {
+  width: 50px;
+  display: inline-block;
+}
+
+.contact-img img {
+  border-radius: 50%;
+}
+
+.contact-info {
+  align-self: center;
+}
+
+.last-message {
+  font-size: 12px;
+  color: lightgray;
+}
+
+.contact-time {
+  font-size: 12px;
+  color: lightgray;
+  margin-left: auto;
+}
+
+/* chat section */
+.chat-section {
+  width: 70%;
+  min-width: 350px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* message section */
+.message-section {
+  height: 100%;
+  background-image: url(../image/U1SFl7.jpg);
+  padding: 50px;
+  padding-bottom: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  max-width: 60%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.message-time {
+  text-align: right;
+  font-size: 10px;
+  color: #9f9f9f;
+}
+
+.inviato {
+  background-color: #d5f9ba;
+  display: inline-block;
+  border-radius: 10px 10px 0 10px;
+  margin-left: auto;
+}
+
+.ricevuto {
+  margin-right: auto;
+  background-color: #fff;
+  border-radius: 10px 10px 10px 0;
+}
+
+/* write message section */
+.write-message-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: 60px;
+  background-color: #eaeaea;
+}
+
+.write-message-section button {
+  color: #5e5e5e;
+  font-size: 20px;
+  border: none;
+  width: 10%;
+  background-color: #eaeaea;
+  cursor: pointer;
+}
+
+.write-message-section input {
+  height: 80%;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+}
