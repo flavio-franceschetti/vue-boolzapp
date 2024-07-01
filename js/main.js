@@ -5,6 +5,7 @@ createApp({
     return {
       selectedContactIndex: 0,
       newMessage: "",
+      search: "",
       contacts: [
         {
           name: "Michele",
@@ -171,10 +172,11 @@ createApp({
     };
   },
   methods: {
+    // metodo per la selezione dei contatti attraverso l'index
     selectedContact(index) {
       this.selectedContactIndex = index;
     },
-
+    // metodo per l invio del nuovo messaggio e la risposta automatica
     newMessageSend(index) {
       if (this.newMessage.length > 0) {
         const messageSent = this.newMessage;
@@ -193,6 +195,18 @@ createApp({
           });
         }, 1000);
       }
+    },
+
+    // funzione per la ricerca dei contatti
+    searching() {
+      this.contacts.forEach((contact) => {
+        // se il nome include le lettere digitate in search collegato all'input allora visible diventa true altrimenti è false e con v-show lo vado a mostrare o no
+        if (contact.name.toLowerCase().includes(this.search.toLowerCase())) {
+          contact.visible = true;
+        } else {
+          contact.visible = false;
+        }
+      });
     },
   },
 }).mount("#app");

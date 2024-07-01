@@ -67,17 +67,25 @@
               </div>
             </div>
           </div>
+
           <!-- ricerca contatti -->
           <div class="contact-search">
             <button><i class="fa-solid fa-magnifying-glass"></i></button>
-            <input type="text" placeholder="Cerca o inizia una nuova chat" />
+            <input
+              @input="searching"
+              v-model="search"
+              type="text"
+              placeholder="Cerca o inizia una nuova chat"
+            />
           </div>
+
           <!-- lista dei contatti -->
           <ul class="contact-list">
             <li
               :class="index === selectedContactIndex ? 'active-chat' : ''"
               v-for="(contact, index) in contacts"
               :key="index"
+              v-show="contact.visible"
               @click="selectedContact(index)"
               class="contact-list-item"
             >
