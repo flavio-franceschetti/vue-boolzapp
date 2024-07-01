@@ -3,6 +3,8 @@ const { createApp } = Vue;
 createApp({
   data() {
     return {
+      selectedContactIndex: 0,
+      newMessage: "",
       contacts: [
         {
           name: "Michele",
@@ -29,7 +31,7 @@ createApp({
         {
           name: "Fabio",
           avatar: "./image/2.jpg",
-          visible: false,
+          visible: true,
           messages: [
             {
               date: "20/03/2020 16:30:00",
@@ -51,7 +53,7 @@ createApp({
         {
           name: "Samuele",
           avatar: "./image/3.jpg",
-          visible: false,
+          visible: true,
           messages: [
             {
               date: "28/03/2020 10:10:40",
@@ -73,7 +75,7 @@ createApp({
         {
           name: "Alessandro B.",
           avatar: "./image/4.jpg",
-          visible: false,
+          visible: true,
           messages: [
             {
               date: "10/01/2020 15:30:55",
@@ -90,7 +92,7 @@ createApp({
         {
           name: "Alessandro L.",
           avatar: "./image/5.jpg",
-          visible: false,
+          visible: true,
           messages: [
             {
               date: "10/01/2020 15:30:55",
@@ -107,7 +109,7 @@ createApp({
         {
           name: "Claudia",
           avatar: "./image/6.jpg",
-          visible: false,
+          visible: true,
           messages: [
             {
               date: "10/01/2020 15:30:55",
@@ -129,7 +131,7 @@ createApp({
         {
           name: "Federico",
           avatar: "./image/7.jpg",
-          visible: false,
+          visible: true,
           messages: [
             {
               date: "10/01/2020 15:30:55",
@@ -146,7 +148,7 @@ createApp({
         {
           name: "Davide",
           avatar: "./image/8.jpg",
-          visible: false,
+          visible: true,
           messages: [
             {
               date: "10/01/2020 15:30:55",
@@ -168,5 +170,21 @@ createApp({
       ],
     };
   },
-  methods: {},
+  methods: {
+    selectedContact(index) {
+      this.selectedContactIndex = index;
+    },
+
+    newMessageSend(index) {
+      if (this.newMessage.length > 0) {
+        const messageSent = this.newMessage;
+        this.contacts[index].messages.push({
+          date: "10/01/2020 15:30:55",
+          message: messageSent,
+          status: "sent",
+        });
+        this.newMessage = "";
+      }
+    },
+  },
 }).mount("#app");
