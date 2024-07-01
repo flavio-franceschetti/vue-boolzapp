@@ -107,10 +107,15 @@
             <!-- left header section -->
             <div class="left-header">
               <div class="header-img">
-                <img src="image/1.jpg" alt="User Portrait" />
+                <img
+                  :src="contacts[selectedContactIndex].avatar"
+                  alt="User Portrait"
+                />
               </div>
               <div class="chat-info">
-                <div class="contact-name">Michele</div>
+                <div class="contact-name">
+                  {{contacts[selectedContactIndex].name}}
+                </div>
                 <div class="last-access">Ultimo accesso alle 12:00</div>
               </div>
             </div>
