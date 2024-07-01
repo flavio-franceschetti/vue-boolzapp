@@ -139,7 +139,6 @@
               class="message"
               v-for="(chat, index) in contacts[selectedContactIndex].messages"
               :key="index"
-              @click="selectedContact(index)"
             >
               {{chat.message}}
               <div class="message-time">15:30</div>
