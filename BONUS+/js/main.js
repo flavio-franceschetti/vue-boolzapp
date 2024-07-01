@@ -6,6 +6,7 @@ createApp({
       selectedContactIndex: 0,
       newMessage: "",
       search: "",
+      extractedTime: "",
       contacts: [
         {
           name: "Michele",
@@ -179,9 +180,13 @@ createApp({
     // metodo per l invio del nuovo messaggio e la risposta automatica
     newMessageSend(index) {
       if (this.newMessage.length > 0) {
+        // creo una variabile dove inserisco la data e l ora locale corrente per inserirla nei nuovi messaggi
+        const currentDate = luxon.DateTime.now().toFormat(
+          "dd/MM/yyyy HH:mm:ss"
+        );
         const messageSent = this.newMessage;
         this.contacts[index].messages.push({
-          date: "10/01/2020 15:30:55",
+          date: currentDate,
           message: messageSent,
           status: "sent",
         });
@@ -189,7 +194,7 @@ createApp({
 
         setTimeout(() => {
           this.contacts[index].messages.push({
-            date: "10/01/2020 15:30:55",
+            date: currentDate,
             message: "ok",
             status: "received",
           });
@@ -207,6 +212,14 @@ createApp({
           contact.visible = false;
         }
       });
+    },
+
+    // Funzione per ottenere solo l'orario dalla data
+    getTimeFromDate(dateString) {
+      // Usa Luxon per fare il parsing della stringa
+      const dt = luxon.DateTime.fromFormat(dateString, "dd/MM/yyyy HH:mm:ss");
+      // Restituisci solo l'orario formattato
+      return dt.toFormat("HH:mm");
     },
   },
 }).mount("#app");

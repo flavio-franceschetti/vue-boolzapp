@@ -21,7 +21,9 @@
     <link rel="stylesheet" href="css/style.css" />
     <!-- script for Vue 3.x -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <title>Boolzapp BONUS</title>
+    <!-- luxon CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js"></script>
+    <title>Boolzapp</title>
   </head>
   <body>
     <!-- general container -->
@@ -141,7 +143,7 @@
               :key="index"
             >
               {{chat.message}}
-              <div class="message-time">15:30</div>
+              <div class="message-time">{{getTimeFromDate(chat.date)}}</div>
             </div>
           </div>
 
