@@ -256,7 +256,6 @@ img {
 }
 
 .dropdown-content {
-  min-width: 40px;
   list-style: none;
   position: absolute;
   right: -50px;
@@ -264,12 +263,12 @@ img {
   z-index: 1;
   background-color: #fff;
   box-shadow: 0 0 6px -2px black;
+  display: none;
 }
 
 .dropdown-content li {
   padding: 10px 10px;
   cursor: pointer;
-  display: none;
 }
 
 .toggle-dropdown {
