@@ -233,5 +233,11 @@ createApp({
         this.toggleDropdown = null;
       }
     },
+
+    deleteMsg(indice, selectedContactIndex) {
+      // console.log(this.contacts[selectedContactIndex].messages);
+      const msgArray = this.contacts[selectedContactIndex].messages;
+      msgArray.splice(indice, 1);
+    },
   },
 }).mount("#app");

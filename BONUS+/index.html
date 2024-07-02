@@ -153,7 +153,9 @@
                   class="dropdown-content"
                 >
                   <li>Message info</li>
-                  <li>Delete message</li>
+                  <li @click="deleteMsg(index, selectedContactIndex)">
+                    Delete message
+                  </li>
                 </ul>
               </div>
             </div>
