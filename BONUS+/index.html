@@ -23,7 +23,7 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <!-- luxon CDN -->
     <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js"></script>
-    <title>Boolzapp</title>
+    <title>Boolzapp bonus</title>
   </head>
   <body>
     <!-- general container -->
@@ -144,6 +144,15 @@
             >
               {{chat.message}}
               <div class="message-time">{{getTimeFromDate(chat.date)}}</div>
+              <div class="chat-dropdown">
+                <button class="dropdown-btn">
+                  <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <ul class="dropdown-content">
+                  <li>Message info</li>
+                  <li>Delete message</li>
+                </ul>
+              </div>
             </div>
           </div>
 
