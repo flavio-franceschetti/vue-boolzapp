@@ -145,10 +145,13 @@
               {{chat.message}}
               <div class="message-time">{{getTimeFromDate(chat.date)}}</div>
               <div class="chat-dropdown">
-                <button class="dropdown-btn">
+                <button @click="dropdown(index)" class="dropdown-btn">
                   <i class="fa-solid fa-chevron-down"></i>
                 </button>
-                <ul class="dropdown-content">
+                <ul
+                  :class="chat.toggleDropdown === true ? 'toggle-dropdown' : ''"
+                  class="dropdown-content"
+                >
                   <li>Message info</li>
                   <li>Delete message</li>
                 </ul>
