@@ -239,5 +239,17 @@ createApp({
       const msgArray = this.contacts[selectedContactIndex].messages;
       msgArray.splice(indice, 1);
     },
+
+    lastMsgTime(index) {
+      const messages = this.contacts[index].messages;
+      const lastMsgDate = messages[messages.length - 1].date;
+      return this.getTimeFromDate(lastMsgDate);
+    },
+
+    lastMsgSended(index) {
+      const messages = this.contacts[index].messages;
+      const lastMsg = messages[messages.length - 1].message;
+      return lastMsg.substring(0, 25) + "...";
+    },
   },
 }).mount("#app");

@@ -96,9 +96,9 @@
               </div>
               <div class="contact-info">
                 <div class="contact-name">{{contact.name}}</div>
-                <div class="last-message">Ultimo messaggio inviato</div>
+                <div class="last-message">{{lastMsgSended(index)}}</div>
               </div>
-              <div class="contact-time">12:00</div>
+              <div class="contact-time">{{lastMsgTime(index)}}</div>
             </li>
           </ul>
         </div>
