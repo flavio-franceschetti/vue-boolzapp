@@ -118,7 +118,9 @@
                 <div class="contact-name">
                   {{contacts[selectedContactIndex].name}}
                 </div>
-                <div class="last-access">Ultimo accesso alle 12:00</div>
+                <div class="last-access">
+                  {{ lastAccess(selectedContactIndex) }}
+                </div>
               </div>
             </div>
             <!-- right header section -->

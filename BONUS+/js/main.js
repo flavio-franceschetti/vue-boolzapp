@@ -225,7 +225,7 @@ createApp({
       // Restituisci solo l'orario formattato
       return dt.toFormat("HH:mm");
     },
-
+    // metodo per far funzionare il dropdown
     dropdown(indice) {
       if (this.toggleDropdown === null) {
         this.toggleDropdown = indice;
@@ -233,23 +233,33 @@ createApp({
         this.toggleDropdown = null;
       }
     },
-
+    // metodo per cancellare il messaggio selezionato
     deleteMsg(indice, selectedContactIndex) {
       // console.log(this.contacts[selectedContactIndex].messages);
       const msgArray = this.contacts[selectedContactIndex].messages;
       msgArray.splice(indice, 1);
     },
-
+    // metodo per aggiornare l'orario dell'ultimo messaggio inviato
     lastMsgTime(index) {
       const messages = this.contacts[index].messages;
       const lastMsgDate = messages[messages.length - 1].date;
       return this.getTimeFromDate(lastMsgDate);
     },
-
+    // metodo per recuperare l'ultimo messaggio inviato e rimpiccolirlo in massimo 25 caratteri
     lastMsgSended(index) {
       const messages = this.contacts[index].messages;
       const lastMsg = messages[messages.length - 1].message;
       return lastMsg.substring(0, 25) + "...";
+    },
+    // funzione per recuperare la data dell'ultimo messaggio ricevuto per inserire l'orario dell ultimo accesso dell'utente
+    lastAccess(selectedContactIndex) {
+      const messages = this.contacts[selectedContactIndex].messages;
+      const filteredMsg = messages.filter(
+        (message) => message.status === "received"
+      );
+
+      const lastMsgDate = filteredMsg[filteredMsg.length - 1].date;
+      return "Ultimo accesso alle:" + this.getTimeFromDate(lastMsgDate);
     },
   },
 }).mount("#app");
